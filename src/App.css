@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+.custom-screen {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useViewportHeight } from '../../utils/hooks/useViewportHeight';
 
 interface Props {
   children?: React.ReactNode;
 }
 
 export default function Layout({ children }: Props) {
+  useViewportHeight();
   return (
-    <div className="min-h-screen bg-neutral-200 font-playfair text-neutral-900 overflow-x-hidden">
+    <div className="custom-screen bg-neutral-200 font-playfair text-neutral-900 overflow-x-hidden">
       <main>{children}</main>
     </div>
   );
